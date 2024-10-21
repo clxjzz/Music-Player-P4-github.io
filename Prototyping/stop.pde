@@ -4,6 +4,7 @@ import ddf.minim.effects.*;
 import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
+<<<<<<< HEAD
 //Global Variables
 Minim minim;
 int numberOfSongs = 3; //Able to Autodetect based on Pathway
@@ -55,6 +56,18 @@ void setup()
   stopHeight = musicButtonSquareHeight*1/2;
   stopX = musicButtonSquareX + musicButtonSquareWidth*1/4;
   stopY = musicButtonSquareY + musicButtonSquareHeight*1/4;
+=======
+//
+//Global Variables
+Minim minim;
+int numberOfSongs = 8; //Able to Autodetect based on Pathway
+AudioPlayer[] song = new AudioPlayer[numberOfSongs];
+int currentSong = numberOfSongs - numberOfSongs;  //beginning current song as ZERO
+//
+void setup()
+{
+  size(900, 800);
+>>>>>>> 845d868062b9423716c27c85093fc4883d66c086
   //
   minim = new Minim(this); //load from data directory, loadFile should also load from project folder
   //
@@ -65,6 +78,14 @@ void setup()
   String beatYourCompetition = "Beat_Your_Competition";
   String cycles = "Cycles";
   String eureka = "Eureka";
+<<<<<<< HEAD
+=======
+  String ghostWalk = "Ghost_Walk";
+  String groove = "groove";
+  String newsroom = "Newsroom";
+  String startYourEngines = "Start_Your_Engines";
+  String theSimplest = "The_Simplest";
+>>>>>>> 845d868062b9423716c27c85093fc4883d66c086
   //
   //Add Reading into Array
   String directory = "../../../" + musicPathway;
@@ -77,6 +98,16 @@ void setup()
   file = directory + cycles + mp3FileName;
   song[currentSong+=1] = minim.loadFile( file );
   file = directory + eureka + mp3FileName;
+<<<<<<< HEAD
+=======
+  song[currentSong+=1] = minim.loadFile( file );
+  file = directory + ghostWalk + mp3FileName;
+  song[currentSong+=1] = minim.loadFile( file );
+  file = directory + newsroom + mp3FileName;
+  song[currentSong+=1] = minim.loadFile( file );
+  file = directory + theSimplest + mp3FileName;
+  song[currentSong+=1] = minim.loadFile( file );
+>>>>>>> 845d868062b9423716c27c85093fc4883d66c086
   //
   currentSong = 0;
   //
@@ -89,6 +120,7 @@ void setup()
   //DIVs
   //rect() based on variables; variables change with program (introduces parameters of a function and TABS)
   //rect( X, Y, Width, Height );
+<<<<<<< HEAD
   //rect( musicButtonDIV_X, musicButtonDIV_Y, musicButtonDIV_Width, musicButtonDIV_Height );
 } //End setup
 //
@@ -166,6 +198,18 @@ void keyPressed() {
    }
    }
    */
+=======
+  rect( width*1/2, height*1/2, width*1/4, height*1/4 ); //stopX, stopY, stopWidth, stopHeight
+} //End setup
+//
+void draw() {
+} //End draw
+//
+void mousePressed() {
+} //End mousePressed
+//
+void keyPressed() {
+>>>>>>> 845d868062b9423716c27c85093fc4883d66c086
 } //End keyPressed
 //
 // End Main Program
