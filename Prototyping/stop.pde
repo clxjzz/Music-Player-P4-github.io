@@ -4,7 +4,7 @@ import ddf.minim.effects.*;
 import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
-<<<<HEAD
+<<<<<<<HEAD
 //Global Variables
 Minim minim;
 int numberOfSongs = 3; //Able to Autodetect based on Pathway
