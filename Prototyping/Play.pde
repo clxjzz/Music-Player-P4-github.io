@@ -210,6 +210,18 @@ void keyPressed() {
       song[currentSong].rewind(); //double tap
     }
   }
+  if (key=='' || key=='') ; // 
+  if (key=='' || key=='') ; // 
+  if (key=='' || key=='') ; // 
+  if (key=='' || key=='') ; // 
+  if (key=='' || key=='') ; // 
+  if (key=='' || key=='') ; // 
+  if (key=='' || key=='') ; //
+  //if (key==CODED || keyCode=='ESC' ) ; // QUIT
+  if (key=='' || key=='') ; // 
+  if (key=='' || key=='') ; // 
+  if (key=='' || key=='') ; // 
+  if (key=='' || key=='') ; // 
 } //End keyPressed
 //
 // End Main Program
