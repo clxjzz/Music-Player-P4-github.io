@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Global Variables
 int appWidth, appHeight;
 float backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight;
@@ -9,6 +10,19 @@ float picmotorcycleWidthChanged, picmotorcycleHeightChanged, biggerSide, smaller
 //
 void setup() {
   size( 500, 700 ); //Landscape
+=======
+//Global Variabes
+int appWidth, appHeight;
+float backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight;
+float basketballX, basketballY, basketballWidth, basketballHeight;
+PImage picBackground, picBasketball;
+int picbasketballWidth, picbasketballHeight;
+float basketballX_Changed, basketballY_Changed;
+float picbasketballWidthChanged, picbasketballHeightChanged, biggerSide, smallerSide, ratio;
+//
+void setup() {
+  size( 500, 100 ); //Landscape
+>>>>>>> 97f769fadf716772d734cba2f6bd9defa6e184ed
   appWidth = width;
   appHeight = height;
   //
@@ -17,6 +31,7 @@ void setup() {
   backgroundImageY = appHeight*0;
   backgroundImageWidth = appWidth-1;
   backgroundImageHeight = appHeight-1;
+<<<<<<< HEAD
   picBackground = loadImage("../../Images/Square/basketball.jpg");
   motorcycleX_Changed = motorcycleX = appWidth * 1/4;
   motorcycleY_Changed = motorcycleY = appHeight * 1/4;
@@ -51,13 +66,40 @@ void setup() {
   //DIVs
   rect( backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight );
   rect( motorcycleX, motorcycleY, motorcycleWidth, motorcycleHeight );
+=======
+  picBackground = loadImage("../../../../images/square/gyb basketball 2.jpg");
+  basketballX = appWidth * 1/4;
+  basketballY = appHeight * 1/4;
+  basketballWidth = appWidth * 1/2;
+  basketballHeight = appHeight * 1/2;
+  picBasketball = loadImage("../../../images/square/gyb basketball 2.jpg");
+  picbasketballWidthChanged = picBasketballWidth = 1920;
+  picbasketballHeightChanged = picBasketballHeight = 1280;
+  //
+  //Image Compression
+  biggerSide = ( picBasketballWidth > picBasketballHeight ) ? picBasketballWidth : picBasketballHeight ;
+  smallerSide = ( picBasketballHeight < picBasketballWidth ) ? picBasketballHeight : picBasketballWidth ;
+  ratio = biggerSide / smallerSide; //Ratio bigger than one, divide means smaller side, multiply means larger side
+  println( biggerSide, smallerSide, ratio );
+  if (basketballWidth > basketballHeight) { //DIV Landscape, } else {}
+  //
+  //DIVs
+  rect( backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight );
+  rect( basketballX, basketballY, basketballWidth, basketballHeight );
+>>>>>>> 97f769fadf716772d734cba2f6bd9defa6e184ed
 }
 //
 void draw() {
   //Draw Image One Time, for testing
+<<<<<<< HEAD
   //image( picBackground, backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight );
   //image( picmotorcycle, motorcycleX_Changed, motorcycleY_Changed, picmotorcycleWidthChanged, picmotorcycleHeightChanged );
 }
+=======
+  image( picBackground, backgroundImageX, backgroundImageY, backgroundImageWidth, backgroundImageHeight );
+  image( picBasketball, basketballX, basketballY, basketballWidthChanged, basketballHeightChanged );
+  }
+>>>>>>> 97f769fadf716772d734cba2f6bd9defa6e184ed
 //
 void mousePressed() {
 }
