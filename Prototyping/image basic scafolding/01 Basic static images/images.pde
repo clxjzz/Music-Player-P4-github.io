@@ -8,7 +8,7 @@ float motorcycleX_Changed, motorcycleY_Changed;
 float picmotorcycleWidthChanged, picmotorcycleHeightChanged;
 //
 void setup() {
-  size( 500, 700 ); //Landscape
+  size( 800, 800 ); //Landscape
   appWidth = width;
   appHeight = height;
   //
