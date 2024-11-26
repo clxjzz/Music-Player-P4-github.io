@@ -1,6 +1,4 @@
 /* Dynamic Text
- - Texting Aspect Ratio
- - change the text in the middle rect()
  */
 // Global Variables
 int appWidth, appHeight;
@@ -26,8 +24,8 @@ void setup()
   //printArray(fontList); //For listing all possible fonts to choose from, then createFont
   // Tools / Create Font / Find Font / Do not press "OK", known bug
   titleFont = createFont("Cambria", 55); //Verify the font exists in Processing.Java
-  footerFont = createFont("Arial", 55);
-  phraseFont = createFont("Playbill", 55);
+  footerFont = createFont("Sylfaen", 55);
+  phraseFont = createFont("Algerian", 55);
   //
   /* Population
    */
@@ -62,7 +60,7 @@ void draw()
   text( title, titleX, titleY, titleWidth, titleHeight );
   ink = red;
   fill(ink);
-  size = 75; //Change the number until it fits
+  size = 70; //Change the number until it fits
   textFont( footerFont, size );
   text( footer, footerX, footerY, footerWidth, footerHeight );
   //
@@ -78,6 +76,7 @@ void mousePressed() {
 } //End mousePressed
 //
 void keyPressed() {
+  if ( key=='C' || key=='c' ) 
   if ( randomColour == true ) {
     randomColour = false;
   }  else {
