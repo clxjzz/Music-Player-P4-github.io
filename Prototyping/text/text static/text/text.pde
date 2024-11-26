@@ -23,7 +23,7 @@ void setup()
   //String[] fontList = PFont.list(); //To list all fonts available on OS
   //printArray(fontList); //For listing all possible fonts to choose from, then createFont
   // Tools / Create Font / Find Font / Do not press "OK", known bug
-  titleFont = createFont("Cambria", 55); //Verify the font exists in Processing.Java
+  titleFont = createFont("Cambria", 55);
   footerFont = createFont("Sylfaen", 55);
   phraseFont = createFont("Algerian", 55);
   //
@@ -33,14 +33,14 @@ void setup()
   titleY = appHeight*1/10;
   titleWidth = appWidth*8/10;
   titleHeight = appHeight*1/10;
-  superCoolPhraseX = titleX; //Best Practice: change on formula
-  superCoolPhraseY = appHeight*4.5/10; //Ratio done last. How is this Centered Vertically?
-  superCoolPhraseWidth = titleWidth; //Best Practice
-  superCoolPhraseHeight = titleHeight; //Best Practice
-  footerX = titleX; //Best Practice
+  superCoolPhraseX = titleX;
+  superCoolPhraseY = appHeight*4.5/10;
+  superCoolPhraseWidth = titleWidth;
+  superCoolPhraseHeight = titleHeight;
+  footerX = titleX;
   footerY = appHeight*8/10;
-  footerWidth = titleWidth; //Best Practice
-  footerHeight = titleHeight; //Best Practice
+  footerWidth = titleWidth;
+  footerHeight = titleHeight;
   //DIVs
   rect( titleX, titleY, titleWidth, titleHeight ); //Title Font
   rect( superCoolPhraseX, superCoolPhraseY, superCoolPhraseWidth, superCoolPhraseHeight ); // Testing Aspect Ratio of Fonts
@@ -55,19 +55,19 @@ void draw()
   //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
   ink = red;
   fill(ink);
-  size = 77; //Change the number until it fits
+  size = 77;
   textFont( titleFont, size );
   text( title, titleX, titleY, titleWidth, titleHeight );
   ink = red;
   fill(ink);
-  size = 70; //Change the number until it fits
+  size = 74;
   textFont( footerFont, size );
   text( footer, footerX, footerY, footerWidth, footerHeight );
   //
   ink = ( randomColour == true ) ? color( random(0, 256), random(256), random(256) ) : red ; //Ternary Operator
   //
   fill(ink);
-  size = 83; //Change the number until it fits
+  size = 83;
   textFont( phraseFont, size );
   text( phrase, superCoolPhraseX, superCoolPhraseY, superCoolPhraseWidth, superCoolPhraseHeight );
 } //End draw
@@ -76,7 +76,7 @@ void mousePressed() {
 } //End mousePressed
 //
 void keyPressed() {
-  if ( key=='C' || key=='c' ) 
+  if ( key=='C' || key=='c' )
   if ( randomColour == true ) {
     randomColour = false;
   }  else {
