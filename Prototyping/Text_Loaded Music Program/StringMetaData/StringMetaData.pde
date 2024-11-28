@@ -16,11 +16,12 @@ float jettX3, jettY3, jettWidth3, jettHeight3;
 Minim minim;
 int numberOfSongs = 3;
 AudioPlayer[] playList = new AudioPlayer[numberOfSongs];
-Audiojett[] playListTitlejett = new AudioPlayer[numberOfsongs];
-Audiojett[] playListPositionjett = new AudioPlayer[numberOfsongs];
-Audiojett[] playListTimeRemainingjett = new AudioPlayer[numberOfsongs];
-Audiojett[] playListTotalTimejett = new AudioPlayer[numberOfsongs];
-int currentSong = numberOfSong = numberOfSongs - numberOfSngs;
+AudioMetaData[] playListTitleMetaData = new AudioMetaData[numberOfSongs];
+AudioMetaData[] playListPostionMetaData = new AudioMetaData[numberOfSongs]; //might change
+AudioMetaData[] playListTimeRemainingMetaData = new AudioMetaData[numberOfSongs]; //might change
+AudioMetaData[] playListTotalTimeMetaData = new AudioMetaData[numberOfSongs]; //might change
+int currentSong = numberOfSongs - numberOfSongs;
+//
 void setup() 
 {
   fullScreen();
