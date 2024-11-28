@@ -7,7 +7,7 @@ import ddf.minim.ugens.*;
 //
 //Global Variables
 Minim minim;
-int numberOfSongs = 8; //Able to Autodetect based on Pathway
+int numberOfSongs = 3; //Able to Autodetect based on Pathway
 AudioPlayer[] song = new AudioPlayer[numberOfSongs];
 int currentSong = numberOfSongs - numberOfSongs;  //beginning current song as ZERO
 //
@@ -83,9 +83,9 @@ void setup()
   //
   //Add Reading into Array
   String directory = "../../" + musicPathway;
-  String file = directory + groove + mp3FileName;
+  String file = directory + Cycles + mp3FileName;
   song[currentSong] = minim.loadFile( file );
-  file = directory + startYourEngines + mp3FileName;
+  file = directory + Eureka + mp3FileName;
   song[currentSong+=1] = minim.loadFile( file );
   file = directory + beatYourCompetition + mp3FileName;
   song[currentSong+=1] = minim.loadFile( file );
