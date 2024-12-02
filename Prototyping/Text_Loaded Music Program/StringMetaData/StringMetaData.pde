@@ -36,7 +36,7 @@ void setup()
   String cycles = "Cycles";
   String eureka = "Eureka";
   //
-  //Add Reading into Array
+  //Add Reading into Array: ../../Music/eureka.mp3
   String directory = "../../" + musicPathway;
   println ( currentSong, directory );
   String file = directory + eureka + mp3FileName;
