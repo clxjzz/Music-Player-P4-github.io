@@ -25,22 +25,17 @@ void setup()
   String cycles = "Cycles";
   String eureka = "Eureka";
   //
-  String directory = "../../../" + musicPathway;
+  //Add Reading into Array
+  String directory = "../../" + musicPathway;
   println ( currentSong, directory );
-  String file = directory + eureka + mp3FileName;
+  String file = directory + cycles + mp3FileName;
   println (file);
-  playList[currentSong] = minim.loadFile( file );
-  file = directory + cycles + mp3FileName;
+  song[currentSong] = minim.loadFile( file );
+  file = directory + eureka + mp3FileName;
   println (file);
-  playList[currentSong+=1] = minim.loadFile( file );
-  println( currentSong, playList[currentSong] );
+  song[currentSong+=1] = minim.loadFile( file );
+  println( currentSong, song[currentSong] );
   file = directory + beatYourCompetition + mp3FileName;
-  println (file);
-  playList[currentSong+=1] = minim.loadFile( file );
-  println( currentSong, playList[currentSong] );
-  file = directory + cycles + mp3FileName;
-  println (file);
-  playList[currentSong+=1] = minim.loadFile( file );
   //
   //Add Reading into Array
   //Add currentSong as hardcoded link

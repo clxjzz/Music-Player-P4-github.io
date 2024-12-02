@@ -76,10 +76,10 @@ void setup()
   String eureka = "Eureka";
   //
   //Add Reading into Array
-  String directory = "../../../" + musicPathway;
-  String file = directory + groove + mp3FileName;
+  String directory = "../../" + musicPathway;
+  String file = directory + cycles + mp3FileName;
   song[currentSong] = minim.loadFile( file );
-  file = directory + startYourEngines + mp3FileName;
+  file = directory + eureka + mp3FileName;
   song[currentSong+=1] = minim.loadFile( file );
   file = directory + beatYourCompetition + mp3FileName;
   song[currentSong+=1] = minim.loadFile( file );

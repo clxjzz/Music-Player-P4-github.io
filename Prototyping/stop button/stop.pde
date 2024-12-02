@@ -1,5 +1,10 @@
-
 //
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
 //Global Variables
 Minim minim;
 int numberOfSongs = 3; //Able to Autodetect based on Pathway
@@ -69,10 +74,10 @@ void setup()
   String eureka = "Eureka";
   //
   //Add Reading into Array
-  String directory = "../../../" + musicPathway;
-  String file = directory + groove + mp3FileName;
+  String directory = "../../" + musicPathway;
+  String file = directory + eureka + mp3FileName;
   song[currentSong] = minim.loadFile( file );
-  file = directory + startYourEngines + mp3FileName;
+  file = directory + cycles + mp3FileName;
   song[currentSong+=1] = minim.loadFile( file );
   file = directory + beatYourCompetition + mp3FileName;
   song[currentSong+=1] = minim.loadFile( file );
@@ -177,9 +182,9 @@ void keyPressed() {
    Symbol is two triangles
    This changes what the button might become after it is pressed
    */
-  //if ( key=='S' || key=='s' ) song[currentSong].pause(); //Simple Stop, no double taps
+  //if ( key=='SPACE' || key=='SPACE' ) song[currentSong].pause(); //Simple Stop, no double taps
   //
-  if ( key=='S' | key=='s' ) {
+  if ( key==' ' | key==' ' ) {
     if ( song[currentSong].isPlaying() ) {
       song[currentSong].pause(); //single tap
     } else {
