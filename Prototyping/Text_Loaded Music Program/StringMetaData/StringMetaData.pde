@@ -37,15 +37,15 @@ void setup()
   String eureka = "Eureka";
   //
   //Add Reading into Array
-  String directory = "../../../" + musicPathway;
+  String directory = "../../" + musicPathway;
   println ( currentSong, directory );
   String file = directory + eureka + mp3FileName;
   println (file);
-  playList[currentSong+=1] = minim.LoadFile ( file );
+  playList[currentSong+=1] = minim.LoadFile( file );
   println( currentSong, playList[currentSong] );
   file = directory + beatYourCompetition + mp3FileName;
   println (file);
-  playList[currentSong+=1] = minim.LoadFile ( file );
+  playList[currentSong+=1] = minim.LoadFile( file );
   println( currentSong, playList[currentSong] );
   file = directory + cycles + mp3FileName;
   println (file);

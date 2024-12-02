@@ -83,9 +83,9 @@ void setup()
   //
   //Add Reading into Array
   String directory = "../../" + musicPathway;
-  String file = directory + Cycles + mp3FileName;
+  String file = directory + cycles + mp3FileName;
   song[currentSong] = minim.loadFile( file );
-  file = directory + Eureka + mp3FileName;
+  file = directory + eureka + mp3FileName;
   song[currentSong+=1] = minim.loadFile( file );
   file = directory + beatYourCompetition + mp3FileName;
   song[currentSong+=1] = minim.loadFile( file );
@@ -179,34 +179,87 @@ void keyPressed() {
    Note: CAP Lock with ||
    if ( key==? || key==? ) ;
    */
-  //if ( key=='P' || key=='p' ) song[currentSong].play(); //Simple Play, no double tap possible
+  //if ( key=='R' || key=='r' ) song[currentSong].play(); //Simple Play, no double tap possible
   //
-  if ( key=='P' || key=='p' ) song[currentSong].loop(0); //Simple Play, double tap possible
+  if ( key=='R' || key=='r' ) song[currentSong].loop(0); //Simple Play, double tap possible
   /* Note: double tap is automatic rewind, no pause
    Symbol is two triangles
    This changes what the button might become after it is pressed
    */
-  //if ( key=='S' || key=='s' ) song[currentSong].pause(); //Simple Stop, no double taps
+  //if ( key=='SPACE' || key=='SPACE' ) song[currentSong].pause(); //Simple Stop, no double taps
   //
-  if ( key=='S' | key=='s' ) {
+  if ( key==' ' | key==' ' ) {
     if ( song[currentSong].isPlaying() ) {
       song[currentSong].pause(); //single tap
     } else {
       song[currentSong].rewind(); //double tap
     }
   }
-  if (key=='' || key=='') ; // 
-  if (key=='' || key=='') ; // 
-  if (key=='' || key=='') ; // 
-  if (key=='' || key=='') ; // 
-  if (key=='' || key=='') ; // 
-  if (key=='' || key=='') ; // 
-  if (key=='' || key=='') ; //
-  //if (key==CODED || keyCode=='ESC' ) ; // QUIT
-  if (key=='' || key=='') ; // 
-  if (key=='' || key=='') ; // 
-  if (key=='' || key=='') ; // 
-  if (key=='' || key=='') ; // 
+ if ( key=='Q' || key=='q' ) song[currentSong].loop(1); // Loop ONCE: Plays, then plays again, then stops & rewinds
+  if ( key=='L' || key=='l' ) song[currentSong].loop(); // Loop Infinitely //Parameter: BLANK or -1
+  if ( key=='S' || key=='s' ) song[currentSong].skip( 10000 ); // Fast Forward, Rewind, & Play Again //Parameter: milliseconds
+  if ( key=='R' || key=='r' ) song[currentSong].skip( -10000 ); // Fast Reverse & Play //Parameter: negative numbers
+  if ( key=='M' || key=='m' ) { // MUTE
+    //
+    //MUTE Behaviour: stops electricty to speakers, does not stop file
+    //NOTE: MUTE has NO built-in PUASE button, NO built-in rewind button
+    //ERROR: if song near end of file, user will not know song is at the end
+    //Known ERROR: once song plays, MUTE acts like it doesn't work
+    if ( song[currentSong].isMuted() ) {
+      //ERROR: song might not be playing
+      //CATCH: ask .isPlaying() or !.isPlaying()
+      song[currentSong].unmute();
+    } else {
+      //Possible ERROR: Might rewind the song
+      song[currentSong].mute();
+    }
+  }
+  if ( key=='O' || key=='o' ) { // Pause
+    //
+    if ( song[currentSong].isPlaying() ) {
+      song[currentSong].pause();
+    } else {
+      song[currentSong].play();
+    }
+  }
+  if ( key==CODED || keyCode==ESC ) exit(); // QUIT //UP
+  if ( key=='Q' || key=='q' ) exit(); // QUIT
+  //
+  if ( key=='N' || key=='n' ) { // NEXT //See .txt for starter hint
+    if ( song[currentSong].isPlaying() ) {
+      song[currentSong].pause();
+      song[currentSong].rewind();
+      //
+      if ( currentSong==numberOfSongs-1 ) {
+        currentSong = 0;
+      } else {
+        currentSong++;
+      }
+      song[currentSong].play();
+    } else {
+      //
+      song[currentSong].rewind();
+      //
+      if ( currentSong==numberOfSongs-1 ) {
+        currentSong = 0;
+      } else {
+        currentSong++;
+      }
+      // NEXT will not automatically play the song
+      //song[currentSong].play();
+    }
+  }
+  //if ( key=='P' || key=='p' ) ; // Previous //Students to finish
+  //
+  //if ( key=='S' || key=='s' ) ; // Shuffle - PLAY (Random)
+  //Note: will randomize the currentSong number
+  //Caution: random() is used very often
+  //Question: how does truncating decimals affect returning random() floats
+  /*
+  if ( key=='' || key=='' ) ; // Play-Pause-STOP //Advanced, beyond single buttons
+   - need to have basic GUI complete first
+   */
+  //
 } //End keyPressed
 //
 // End Main Program
