@@ -36,21 +36,18 @@ void setup()
   String cycles = "Cycles";
   String eureka = "Eureka";
   //
-  //Add Reading into Array: ../../Music/eureka.mp3
+  //Add Reading into Array:
   String directory = "../../" + musicPathway;
   println ( currentSong, directory );
   String file = directory + eureka + mp3FileName;
-  println (file);
-  playList[currentSong+=1] = minim.LoadFile( file );
-  println( currentSong, playList[currentSong] );
-  file = directory + beatYourCompetition + mp3FileName;
-  println (file);
-  playList[currentSong+=1] = minim.LoadFile( file );
-  println( currentSong, playList[currentSong] );
+  playList[currentSong] = minim.loadFile( file );
+  //println ( currentSong, file, playList[currentSong] );
   file = directory + cycles + mp3FileName;
-  println (file);
   playList[currentSong+=1] = minim.loadFile( file );
-  println( currentSong, playList[currentSong] );
+  //println ( currentSong, file, playList[currentSong] );
+  file = directory + beatYourCompetition + mp3FileName;
+  playList[currentSong+=1] = minim.loadFile( file );
+  //println ( currentSong, file, playList[currentSong] );
   
   //
   currentSong = 0;
