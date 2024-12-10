@@ -1,17 +1,19 @@
 //Library - Minim
 //
 //Global Variables
-float nameX, nameY, nameWidth, nameHeight;
+float musicPlayerX, musicPlayerY, musicPlayerWidth, musicPlayerHeight;
 //
 void setup()
 {
+  //Display
+  size(1000,800);
   //Population
-  nameX = ;
-  nameY = ;
-  nameWidth = ;
-  nameHeight = ;
-  //DIVs: required, name each variable
-  rect( nameX, nameY, nameWidth, nameHeight );
+  musicPlayerX = 1/2;
+  musicPlayerY = 1/2;
+  musicPlayerWidth = 1/4;
+  musicPlayerHeight = 1/4;
+  //DIVs: required, musicPlayer each variable
+  rect( musicPlayerX, musicPlayerY, musicPlayerWidth, musicPlayerHeight );
   //
 } //End setup
 //
