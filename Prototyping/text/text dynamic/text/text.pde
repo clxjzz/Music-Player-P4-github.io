@@ -78,6 +78,7 @@ void mousePressed() {
 } //End mousePressed
 //
 void keyPressed() {
+  if ( key=='C' || key=='c' )
   if ( randomColour == true ) {
     randomColour = false;
   }  else {
